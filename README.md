@@ -25,11 +25,10 @@ I used the Olimex midi shield : https://www.olimex.com/Products/Duino/Shields/SH
 
 # LIBRARY ARDUINO IDE
 
-MIDI.h
+MIDI.h / Ethernet.h / EthernetUdp.h
 
-Ethernet.h
 
-EthernetUdp.h
+And also :
 
 OSSmessage.h
 
