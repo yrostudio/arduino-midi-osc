@@ -26,12 +26,17 @@ I used the Olimex midi shield : https://www.olimex.com/Products/Duino/Shields/SH
 # LIBRARY ARDUINO IDE
 
 MIDI.h
+
 Ethernet.h
+
 EthernetUdp.h
 
 OSSmessage.h
+
 add via Library Manager (not working for me)
+
 or download zip https://github.com/CNMAT/OSC
+
 Then in Arduino IDE : Sketch/Include Library / Add .ZIP library
 
 
