@@ -7,17 +7,17 @@ Sending / receiving midi on long distance using OSC.
 For example, you need to send / receive midi from the stage to the control booth.
 
 
-You need : 
+# HARDWARE
 
-# 1. Arduino
+1. Arduino
 I used the Arduino Nano.
 
-# 2. Arduino ethernet shield
+2. Arduino ethernet shield
 I used the official Arduino ethernet shield
 
-# 3. Arduino midi shield
+3. Arduino midi shield
 I used the Olimex midi shield : https://www.olimex.com/Products/Duino/Shields/SHIELD-MIDI/open-source-hardware
 
-# 4. 2 Midi cables and ethernet cable
+4. 2 Midi cables and ethernet cable
 
-# 5. Audio card or midi/usb with midi out and midi in
+5. Audio card or midi/usb with midi out and midi in
