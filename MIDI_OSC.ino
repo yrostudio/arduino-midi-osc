@@ -37,17 +37,20 @@ void setup() {
 
 // OSC MESSAGE FUNCTION
 
-void handleOSC(int osc1, int osc2, int osc3, const char* messageOsc) 
+void handleOSC(const char* messageOsc, int numParams, ...) 
 {
   OSCMessage msg(messageOsc);
-  msg.add(osc1);
-  msg.add(osc2);
-  msg.add(osc3);
+  va_list args;
+  va_start(args, numParams);
+  for(int i = 0; i < numParams; i++){
+    int arg = va_arg(args, int);
+    msg.add(arg);
+  }
+  va_end(args);
   Udp.beginPacket(destIp, destPort);
   msg.send(Udp);
   Udp.endPacket(); 
   msg.empty(); 
-  
 }
 
 
@@ -89,7 +92,7 @@ void loop() {
         osc2 = velocity;
         osc3 = channel; 
         messageOsc = "/note";
-        handleOSC(osc1,osc2,osc3,messageOsc);
+        handleOSC(messageOsc, 3, osc1,osc2,osc3);
       
      }
 
@@ -101,7 +104,7 @@ void loop() {
         osc2 = value_cc;
         osc3 = channel;
         messageOsc = "/cc";
-        handleOSC(osc1,osc2,osc3,messageOsc);
+        handleOSC(messageOsc, 3, osc1,osc2,osc3);
 
       }
 
@@ -119,10 +122,8 @@ void loop() {
   //if (analogValue > oldAnalogValue + 2 || analogValue < oldAnalogValue - 2)  {
 
     osc1 = analogValue ;
-    osc2 = 0;
-    osc3 = 0;
     messageOsc = "/piezo1";
-    handleOSC(osc1,osc2,osc3,messageOsc);
+    handleOSC(messageOsc, 1, osc1);
 
  //   oldAnalogValue = analogValue;
  //}
@@ -136,11 +137,10 @@ if (currentMillis - previousMillis >= interval) {
     osc2 = 0;
     osc3 = 0;
     messageOsc = "/debug";
-    handleOSC(osc1,osc2,osc3,messageOsc);
+    handleOSC(messageOsc, 1, osc1);
   }
 
   delay(1); 
 }
-
 
 
