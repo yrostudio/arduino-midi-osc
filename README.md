@@ -1,5 +1,5 @@
 # arduino-midi-osc
-Both direction convertion midi / osc. 
+Both direction midi to osc. 
 Receive midi in Arduino converted to osc message ///// send midi to arduino converted to osc message
 
 Sending / receiving midi on long distance using OSC.
@@ -58,6 +58,18 @@ Go to Apple / System Preferences / Network
 Connect midi cables, electric plug, ...
 
 ![ARDUINO_MIDI_OSC](https://user-images.githubusercontent.com/59850990/236285776-25273106-3389-4f2b-8589-a0357e21650b.jpg)
+
+
+# MESSAGES
+
+Midi to OSC
+
+convert midi note to /note i i i (note velocity channel)
+convert midi control change to /cc i i i (value control change number channel)
+
+OSC to Midi
+convert /note i i i (note velocity channel) to midi note 
+convert /cc i i i (value control change number channel) to midi control change
 
 
 
