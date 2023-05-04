@@ -65,11 +65,13 @@ Connect midi cables, electric plug, ethernet ...
 Midi to OSC
 
 convert midi note to /note i i i (note,velocity, channel)
+
 convert midi control change to /cc i i i (value, control change, number channel)
 
 
 OSC to Midi
 convert /note i i i (note, velocity, channel) to midi note 
+
 convert /cc i i i (value, control change number, channel) to midi control change
 
 
