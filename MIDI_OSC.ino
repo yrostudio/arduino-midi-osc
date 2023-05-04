@@ -134,8 +134,6 @@ void loop() {
 if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis; 
     osc1 = 1;
-    osc2 = 0;
-    osc3 = 0;
     messageOsc = "/debug";
     handleOSC(messageOsc, 1, osc1);
   }
