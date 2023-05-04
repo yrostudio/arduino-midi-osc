@@ -38,8 +38,9 @@ or download zip https://github.com/CNMAT/OSC
 
 Then in Arduino IDE : Sketch/Include Library / Add .ZIP library
 
+<img src="https://github.com/yrostudio/arduino-midi-osc/edit/main/MAX_PATCH.png"/>
 
-https://github.com/yrostudio/arduino-midi-osc/edit/main/MAX_PATCH.png
+
 
 
 
