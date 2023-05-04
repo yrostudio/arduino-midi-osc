@@ -55,7 +55,7 @@ Go to Apple / System Preferences / Network
 ![Screenshot 2023-05-04 at 19 47 10](https://user-images.githubusercontent.com/59850990/236286908-139f3726-21ad-49f4-92f0-f8ea0d0d6608.png)
 
 
-Connect midi cables, electric plug, ...
+Connect midi cables, electric plug, ethernet ...
 
 ![ARDUINO_MIDI_OSC](https://user-images.githubusercontent.com/59850990/236285776-25273106-3389-4f2b-8589-a0357e21650b.jpg)
 
@@ -64,12 +64,13 @@ Connect midi cables, electric plug, ...
 
 Midi to OSC
 
-convert midi note to /note i i i (note velocity channel)
-convert midi control change to /cc i i i (value control change number channel)
+convert midi note to /note i i i (note,velocity, channel)
+convert midi control change to /cc i i i (value, control change, number channel)
+
 
 OSC to Midi
-convert /note i i i (note velocity channel) to midi note 
-convert /cc i i i (value control change number channel) to midi control change
+convert /note i i i (note, velocity, channel) to midi note 
+convert /cc i i i (value, control change number, channel) to midi control change
 
 
 
