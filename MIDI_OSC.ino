@@ -119,6 +119,8 @@ void loop() {
   if (analogValue > oldAnalogValue + 2 || analogValue < oldAnalogValue - 2)  {
 
     osc1 = analogValue ;
+    osc2 = 0;
+    osc3 = 0;
     messageOsc = "/piezo1";
     handleOSC(osc1,osc2,osc3,messageOsc);
 
@@ -131,6 +133,8 @@ void loop() {
 if (currentMillis - previousMillis >= interval) {
     previousMillis = currentMillis; 
     osc1 = 1;
+    osc2 = 0;
+    osc3 = 0;
     messageOsc = "/debug";
     handleOSC(osc1,osc2,osc3,messageOsc);
   }
