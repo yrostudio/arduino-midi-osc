@@ -64,21 +64,21 @@ Connect midi cables, electric plug, ethernet ...
 
 Midi to OSC
 
-convert midi note to /note i i i (note,velocity, channel)
+convert midi note to osc message /note i i i (note,velocity, channel)
 
-convert midi control change to /cc i i i (value, control change, number channel)
+convert midi control change to osc message /cc i i i (value, control change, number channel)
 
 
 OSC to Midi
-convert /note i i i (note, velocity, channel) to midi note 
+convert osc message /note i i i (note, velocity, channel) to midi note 
 
-convert /cc i i i (value, control change number, channel) to midi control change
+convert osc message /cc i i i (value, control change number, channel) to midi control change
 
 
 
 
 # MAXMSP PATCH 
-included to test the arduino
+To try the communication
 
 ![MAX_PATCH](https://user-images.githubusercontent.com/59850990/236284361-b6877bfb-6c16-496d-9662-5ad811449646.png)
 
