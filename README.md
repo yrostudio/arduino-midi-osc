@@ -70,6 +70,3 @@ included to test the arduino
 
 
 
-
-
-
